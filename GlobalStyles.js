@@ -7,9 +7,19 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   html, body {
     background-color: #fff;
     font-family: "Lato", sans-serif;
+  }
+
+  body {
+    line-height: 1.5;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
   body::-webkit-scrollbar {
