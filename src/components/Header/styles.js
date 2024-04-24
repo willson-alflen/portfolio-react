@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Header = styled.header`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,6 +28,11 @@ export const LogoContainer = styled.div`
   height: 48px;
   border-radius: 50%;
   background-color: ${(props) => props.theme.mainColor};
+
+  @media (max-width: 375px) {
+    width: 40px;
+    height: 40px;
+  }
 `
 
 export const Logo = styled.img`
@@ -36,6 +42,10 @@ export const Logo = styled.img`
 export const HeaderBrandText = styled.span`
   &:hover {
     color: ${(props) => props.theme.mainColor};
+  }
+
+  @media (max-width: 375px) {
+    font-size: 0.8rem;
   }
 `
 
@@ -49,8 +59,64 @@ export const HeaderNav = styled.nav`
   }
 `
 
+export const Hamburger = styled.div`
+  display: none;
+  line-height: 0;
+
+  .hamburger-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`
+
+export const NavLinks = styled.div`
+  display: flex;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    display: ${(props) => (props.$isOpen ? 'flex' : 'none')};
+    gap: 0;
+
+    ${(props) =>
+      props.$isOpen &&
+      `
+        flex-direction: column;
+        position: absolute;
+        z-index: 10;
+        top: 80px;
+        right: 2rem;
+        background-color: ${props.theme.accentColor};
+        padding: 0.5rem 0;
+        border-radius: 0  0 8px 8px;
+
+        a {
+          text-align: right;
+          color: ${props.theme.textColorAlt};
+          transition: color 0.3s ease;
+          padding: 0.5rem 2rem;
+          width: 100%;
+
+          &:hover {
+            color: ${props.theme.textColor};
+            background-color: ${props.theme.backgroundColorOpacity};
+          }
+        }
+      `}
+  }
+
+  @media (max-width: 375px) {
+    top: 72px;
+    font-size: 0.9rem;
+  }
+`
+
 export const ToggleTheme = styled.div`
   cursor: pointer;
+  line-height: 0;
 
   & > * {
     font-size: 1.2rem;
