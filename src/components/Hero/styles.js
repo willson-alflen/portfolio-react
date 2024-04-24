@@ -20,6 +20,10 @@ export const HeroContent = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
+
+  @media (max-width: 375px) {
+    padding: 0 1rem;
+  }
 `
 
 export const HeroHeading = styled.h1`
@@ -30,6 +34,19 @@ export const HeroHeading = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 3rem;
+    line-height: 1.25;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 1.75rem;
   }
 `
 
@@ -47,6 +64,10 @@ export const HeroDescription = styled.p`
   @media (max-width: 768px) {
     font-size: 1rem;
     width: 85%;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 0.9rem;
   }
 `
 
@@ -79,6 +100,14 @@ export const HeroCTA = styled.div`
 
     a {
       font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 2rem;
+
+    a {
+      font-size: 0.9rem;
     }
   }
 `

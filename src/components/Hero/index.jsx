@@ -9,7 +9,7 @@ export default function Hero() {
     <S.Hero>
       <S.HeroContent>
         <S.HeroHeading>
-          Hey, may name is <br />
+          Hey, my name is <br />
           <span>Willson Alflen</span>
         </S.HeroHeading>
         <S.HeroDescription>
