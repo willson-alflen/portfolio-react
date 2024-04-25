@@ -3,8 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import GlobalStyles from '../GlobalStyles'
 import { ThemeProvider } from 'styled-components'
 import { darkTheme, lightTheme } from './components/Theme'
-import GlobalLayout from './components/GlobalLayout'
 import { ThemeContext } from './contexts/ThemeContext'
+import GlobalLayout from './components/GlobalLayout'
+import Home from './pages/Home'
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
@@ -23,7 +24,9 @@ function App() {
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<GlobalLayout />} />
+            <Route path="/" element={<GlobalLayout />}>
+              <Route index element={<Home />} />
+            </Route>
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

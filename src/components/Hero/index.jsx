@@ -6,7 +6,7 @@ import WhatsappIcon from '../../assets/images/whatsapp-ico.png'
 
 export default function Hero() {
   return (
-    <S.Hero>
+    <S.Hero id="hero">
       <S.HeroContent>
         <S.HeroHeading>
           Hey, my name is <br />

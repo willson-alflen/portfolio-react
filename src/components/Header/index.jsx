@@ -43,39 +43,6 @@ export default function Header() {
     }
   }, [isLargeScreen])
 
-  useEffect(() => {
-    const updateActiveLink = () => {
-      const links = document.querySelectorAll('.nav-link')
-      links.forEach((link) => {
-        const section = document.querySelector(link.getAttribute('href'))
-        const sectionRect = section.getBoundingClientRect()
-        if (sectionRect.top <= 0 && sectionRect.bottom >= 0) {
-          link.classList.add('active')
-        } else {
-          link.classList.remove('active')
-        }
-      })
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            updateActiveLink()
-          }
-        })
-      },
-      { threshold: 0.7 }
-    )
-
-    const sections = document.querySelectorAll('section')
-    sections.forEach((section) => observer.observe(section))
-
-    return () => {
-      sections.forEach((section) => observer.unobserve(section))
-    }
-  }, [])
-
   return (
     <S.Header>
       <Link to="/">
@@ -95,7 +62,7 @@ export default function Header() {
           />
         </S.Hamburger>
         <S.NavLinks $isOpen={isMenuOpen}>
-          <a href="/" className="nav-link" onClick={closeMenu}>
+          <a href="#hero" className="nav-link" onClick={closeMenu}>
             Home
           </a>
           <a href="#projects" className="nav-link" onClick={closeMenu}>
