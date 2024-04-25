@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import Hero from '../../components/Hero'
 import Projects from '../../components/Projects'
+import About from '../../components/About'
 
 export default function Home() {
   useEffect(() => {
@@ -50,6 +51,7 @@ export default function Home() {
     <>
       <Hero />
       <Projects />
+      <About />
     </>
   )
 }

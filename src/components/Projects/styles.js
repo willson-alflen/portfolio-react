@@ -66,6 +66,10 @@ export const Project = styled.div`
   grid-gap: 3rem;
   margin-bottom: 6rem;
 
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
   img {
     width: 100%;
     height: 100%;

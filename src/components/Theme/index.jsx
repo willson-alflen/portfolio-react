@@ -1,6 +1,8 @@
 export const lightTheme = {
   backgroundColor: 'rgb(255, 255, 255)',
   backgroundColorOpacity: 'rgba(255, 255, 255, 0.8)',
+  backgroundColorAlt: 'rgb(250, 250, 250)',
+  backgroundColorAlt2: 'rgba(153, 153, 153, 0.2)',
   textColor: 'rgb(0, 0, 0)',
   textColorAlt: 'rgb(255, 255, 255)',
   textColorAlt2: 'rgb(119, 119, 119)',
@@ -19,6 +21,8 @@ export const lightTheme = {
 export const darkTheme = {
   backgroundColor: 'rgb(0, 108, 185)',
   backgroundColorOpacity: 'rgba(0, 108, 185, 0.8)',
+  backgroundColorAlt: 'rgb(250, 250, 250)',
+  backgroundColorAlt2: 'rgba(153, 153, 153, 0.2)',
   textColor: 'rgba(255, 255, 255, 0.9)',
   textColorAlt: 'rgba(0, 0, 0, 0.9)',
   textColorAlt2: 'rgb(119, 119, 119)',
