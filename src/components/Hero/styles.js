@@ -10,7 +10,7 @@ export const Hero = styled.section`
     ),
     url(${CommonBG});
   background-position: center;
-  height: calc(100vh - 5rem);
+  height: 100vh;
   position: relative;
 `
 

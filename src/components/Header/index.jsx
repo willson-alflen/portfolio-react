@@ -1,20 +1,15 @@
 import { useContext, useEffect, useRef, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ProfilePicture from '../../assets/images/profile-picture.png'
-import { useTheme } from 'styled-components'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { MdMenu, MdOutlineLightMode } from 'react-icons/md'
 import * as S from './styles'
 
 export default function Header() {
-  const theme = useTheme()
   const { toggleTheme } = useContext(ThemeContext)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768)
   const menuRef = useRef(null)
-  const activeStyles = {
-    color: theme.mainColor,
-  }
 
   const closeMenu = () => {
     setIsMenuOpen(false)
@@ -48,6 +43,39 @@ export default function Header() {
     }
   }, [isLargeScreen])
 
+  useEffect(() => {
+    const updateActiveLink = () => {
+      const links = document.querySelectorAll('.nav-link')
+      links.forEach((link) => {
+        const section = document.querySelector(link.getAttribute('href'))
+        const sectionRect = section.getBoundingClientRect()
+        if (sectionRect.top <= 0 && sectionRect.bottom >= 0) {
+          link.classList.add('active')
+        } else {
+          link.classList.remove('active')
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            updateActiveLink()
+          }
+        })
+      },
+      { threshold: 0.7 }
+    )
+
+    const sections = document.querySelectorAll('section')
+    sections.forEach((section) => observer.observe(section))
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section))
+    }
+  }, [])
+
   return (
     <S.Header>
       <Link to="/">
@@ -67,35 +95,18 @@ export default function Header() {
           />
         </S.Hamburger>
         <S.NavLinks $isOpen={isMenuOpen}>
-          <NavLink
-            to="/"
-            end
-            style={({ isActive }) => (isActive ? activeStyles : null)}
-            onClick={closeMenu}
-          >
+          <a href="/" className="nav-link" onClick={closeMenu}>
             Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            style={({ isActive }) => (isActive ? activeStyles : null)}
-            onClick={closeMenu}
-          >
-            About
-          </NavLink>
-          <NavLink
-            to="/projects"
-            style={({ isActive }) => (isActive ? activeStyles : null)}
-            onClick={closeMenu}
-          >
+          </a>
+          <a href="#projects" className="nav-link" onClick={closeMenu}>
             Projects
-          </NavLink>
-          <NavLink
-            to="/contact"
-            style={({ isActive }) => (isActive ? activeStyles : null)}
-            onClick={closeMenu}
-          >
+          </a>
+          <a href="#about" className="nav-link" onClick={closeMenu}>
+            About
+          </a>
+          <a href="#contact" className="nav-link" onClick={closeMenu}>
             Contact
-          </NavLink>
+          </a>
         </S.NavLinks>
         <S.ToggleTheme>
           <MdOutlineLightMode onClick={toggleTheme} />

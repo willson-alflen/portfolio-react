@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 export const Header = styled.header`
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,6 +14,7 @@ export const Header = styled.header`
   font-weight: bold;
   padding: 1rem 2rem;
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 `
 
 export const HeaderBrand = styled.div`
@@ -76,6 +79,14 @@ export const Hamburger = styled.div`
 export const NavLinks = styled.div`
   display: flex;
   gap: 1rem;
+
+  .nav-link {
+    cursor: pointer;
+  }
+
+  .nav-link.active {
+    color: ${(props) => props.theme.mainColor};
+  }
 
   @media (max-width: 768px) {
     display: ${(props) => (props.$isOpen ? 'flex' : 'none')};
