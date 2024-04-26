@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import GlobalStyles from '../GlobalStyles'
 import { ThemeProvider } from 'styled-components'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.min.css'
 import { darkTheme, lightTheme } from './components/Theme'
 import { ThemeContext } from './contexts/ThemeContext'
 import GlobalLayout from './components/GlobalLayout'
@@ -23,6 +25,7 @@ function App() {
       <GlobalStyles />
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         <BrowserRouter>
+          <ToastContainer autoClose={3000} />
           <Routes>
             <Route path="/" element={<GlobalLayout />}>
               <Route index element={<Home />} />
