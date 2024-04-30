@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import GlobalStyles from '../GlobalStyles'
 import { ThemeProvider } from 'styled-components'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.min.css'
 import { darkTheme, lightTheme } from './components/Theme'
 import { ThemeContext } from './contexts/ThemeContext'
-import GlobalLayout from './components/GlobalLayout'
-import Home from './pages/Home'
+import { ProjectsProvider } from './contexts/ProjectsContext'
+import ScrollToTopAndRoutes from './components/ScrollToTopAndRoutes'
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
@@ -24,14 +24,12 @@ function App() {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <GlobalStyles />
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-        <BrowserRouter>
-          <ToastContainer autoClose={3000} />
-          <Routes>
-            <Route path="/" element={<GlobalLayout />}>
-              <Route index element={<Home />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
+        <ProjectsProvider>
+          <ToastContainer />
+          <BrowserRouter>
+            <ScrollToTopAndRoutes />
+          </BrowserRouter>
+        </ProjectsProvider>
       </ThemeProvider>
     </ThemeContext.Provider>
   )

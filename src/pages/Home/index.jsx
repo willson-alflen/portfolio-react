@@ -24,16 +24,13 @@ export default function Home() {
       })
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            updateActiveLink()
-          }
-        })
-      },
-      { threshold: 0.7 }
-    )
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          updateActiveLink()
+        }
+      })
+    })
 
     window.onload = () => {
       const sections = document.querySelectorAll('section')
@@ -45,6 +42,7 @@ export default function Home() {
 
     return () => {
       window.removeEventListener('scroll', updateActiveLink)
+      observer.disconnect()
     }
   }, [])
 

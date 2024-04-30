@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import ProfilePicture from '../../assets/images/profile-picture.png'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { MdMenu, MdOutlineLightMode } from 'react-icons/md'
@@ -10,6 +10,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768)
   const menuRef = useRef(null)
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
 
   const closeMenu = () => {
     setIsMenuOpen(false)
@@ -62,18 +64,53 @@ export default function Header() {
           />
         </S.Hamburger>
         <S.NavLinks $isOpen={isMenuOpen}>
-          <a href="#hero" className="nav-link" onClick={closeMenu}>
-            Home
-          </a>
-          <a href="#projects" className="nav-link" onClick={closeMenu}>
-            Projects
-          </a>
-          <a href="#about" className="nav-link" onClick={closeMenu}>
-            About
-          </a>
-          <a href="#contact" className="nav-link" onClick={closeMenu}>
-            Contact
-          </a>
+          {isHomePage ? (
+            <>
+              <a href="#hero" className="nav-link" onClick={closeMenu}>
+                Home
+              </a>
+              <a href="#projects" className="nav-link" onClick={closeMenu}>
+                Projects
+              </a>
+              <a href="#about" className="nav-link" onClick={closeMenu}>
+                About
+              </a>
+              <a href="#contact" className="nav-link" onClick={closeMenu}>
+                Contact
+              </a>
+            </>
+          ) : (
+            <>
+              <Link
+                to={{ pathname: '/', hash: '#hero' }}
+                className="nav-link"
+                onClick={closeMenu}
+              >
+                Home
+              </Link>
+              <Link
+                to={{ pathname: '/', hash: '#projects' }}
+                className="nav-link"
+                onClick={closeMenu}
+              >
+                Projects
+              </Link>
+              <Link
+                to={{ pathname: '/', hash: '#about' }}
+                className="nav-link"
+                onClick={closeMenu}
+              >
+                About
+              </Link>
+              <Link
+                to={{ pathname: '/', hash: '#contact' }}
+                className="nav-link"
+                onClick={closeMenu}
+              >
+                Contact
+              </Link>
+            </>
+          )}
         </S.NavLinks>
         <S.ToggleTheme>
           <MdOutlineLightMode onClick={toggleTheme} />
