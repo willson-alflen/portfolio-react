@@ -78,6 +78,9 @@ export default function Header() {
               <a href="#contact" className="nav-link" onClick={closeMenu}>
                 Contact
               </a>
+              <Link to="/resume" className="nav-link" onClick={closeMenu}>
+                Resume
+              </Link>
             </>
           ) : (
             <>
@@ -108,6 +111,9 @@ export default function Header() {
                 onClick={closeMenu}
               >
                 Contact
+              </Link>
+              <Link to="/resume" className="nav-link" onClick={closeMenu}>
+                Resume
               </Link>
             </>
           )}

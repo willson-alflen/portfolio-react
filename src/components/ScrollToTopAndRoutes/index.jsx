@@ -3,6 +3,7 @@ import { useLocation, Routes, Route } from 'react-router-dom'
 import GlobalLayout from '../GlobalLayout'
 import Home from '../../pages/Home'
 import ProjectDetail from '../../pages/ProjectDetail'
+import ResumePage from '../../pages/Resume'
 
 export default function ScrollToTopAndRoutes() {
   const location = useLocation()
@@ -23,6 +24,7 @@ export default function ScrollToTopAndRoutes() {
       <Route path="/" element={<GlobalLayout />}>
         <Route index element={<Home />} />
         <Route path="/:projectName" element={<ProjectDetail />} />
+        <Route path="/resume" element={<ResumePage />} />
       </Route>
     </Routes>
   )
