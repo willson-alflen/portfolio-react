@@ -21,18 +21,22 @@ export default function Contact() {
 
     if (isSubmitting) {
       if (e.target.name === 'user_name' && e.target.value.length < 3) {
-        toast.error('Name must be at least 3 characters long')
+        toast.error('Name must be at least 3 characters long', {
+          ariaLive: 'assertive',
+        })
         return
       }
       if (
         e.target.name === 'user_email' &&
         !/\S+@\S+\.\S+/.test(e.target.value)
       ) {
-        toast.error('Invalid email')
+        toast.error('Invalid email', { ariaLive: 'assertive' })
         return
       }
       if (e.target.name === 'message' && e.target.value.length < 10) {
-        toast.error('Message must be at least 10 characters long')
+        toast.error('Message must be at least 10 characters long', {
+          ariaLive: 'assertive',
+        })
         return
       }
     }
@@ -50,7 +54,7 @@ export default function Contact() {
     setInvalidFields(emptyFields)
 
     if (emptyFields.length) {
-      toast.error('All fields are required')
+      toast.error('All fields are required', { ariaLive: 'assertive' })
       return
     }
 
@@ -66,24 +70,24 @@ export default function Contact() {
       .then((result) => {
         setIsSubmitting(false)
         if (result.status === 200) {
-          toast.success('Message sent successfully')
+          toast.success('Message sent successfully', { ariaLive: 'assertive' })
           setFormData({
             user_name: '',
             user_email: '',
             message: '',
           })
         } else {
-          toast.error(result.text)
+          toast.error(result.text, { ariaLive: 'assertive' })
         }
       })
       .catch((error) => {
         setIsSubmitting(false)
-        toast.error(error.message)
+        toast.error(error.message, { ariaLive: 'assertive' })
       })
   }
 
   return (
-    <S.Contact id="contact">
+    <S.Contact id="contact" tabIndex={0}>
       <S.ContactContainer>
         <S.ContactHeading>
           <h2>Contact Me</h2>
@@ -94,6 +98,9 @@ export default function Contact() {
         </S.ContactHeading>
 
         <S.ContactForm ref={formRef} onSubmit={handleFormSubmit}>
+          <label htmlFor="user_name" className="visually-hidden">
+            Name
+          </label>
           <S.FormInput
             type="text"
             placeholder="Name"
@@ -101,7 +108,13 @@ export default function Contact() {
             value={formData.user_name}
             onChange={handleChange}
             $invalid={invalidFields.includes('user_name')}
+            aria-label="Name"
+            aria-required="true"
           />
+
+          <label htmlFor="user_email" className="visually-hidden">
+            Email
+          </label>
           <S.FormInput
             type="email"
             placeholder="Email"
@@ -109,15 +122,27 @@ export default function Contact() {
             value={formData.user_email}
             onChange={handleChange}
             $invalid={invalidFields.includes('user_email')}
+            aria-label="Email"
+            aria-required="true"
           />
+
+          <label htmlFor="message" className="visually-hidden">
+            Message
+          </label>
           <S.FormTextArea
             placeholder="Message"
             name="message"
             value={formData.message}
             onChange={handleChange}
             $invalid={invalidFields.includes('message')}
+            aria-label="Message"
+            aria-required="true"
           />
-          <button type="submit" disabled={isSubmitting}>
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            aria-label="Send message"
+          >
             {isSubmitting ? <BeatLoader color="#ffffff" size={8} /> : 'Send'}
           </button>
         </S.ContactForm>

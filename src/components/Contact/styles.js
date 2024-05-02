@@ -20,7 +20,7 @@ export const ContactContainer = styled.div`
 
 export const ContactHeading = styled.div`
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 
   h2 {
     font-size: 2.5rem;
@@ -67,10 +67,13 @@ export const ContactHeading = styled.div`
 
 export const ContactForm = styled.form`
   display: grid;
-  gap: 1rem;
   grid-template-columns: 1fr;
   max-width: 600px;
   margin: 0 auto;
+
+  .visually-hidden {
+    visibility: hidden;
+  }
 
   button {
     background: ${(props) => props.theme.mainColor};
@@ -84,6 +87,10 @@ export const ContactForm = styled.form`
     border-radius: 4px;
     cursor: pointer;
     transition: background 0.3s;
+
+    &:focus {
+      border: 2px solid red;
+    }
 
     &:hover {
       background: ${(props) => props.theme.accentColor};
@@ -101,6 +108,10 @@ export const FormInput = styled.input`
   font-size: 1rem;
   background: ${(props) => props.theme.backgroundColorAlt};
   color: ${(props) => props.theme.textColor};
+
+  &:focus {
+    border: 2px solid red;
+  }
 
   ${(props) =>
     props.$invalid &&
@@ -120,6 +131,11 @@ export const FormTextArea = styled.textarea`
   font-size: 1rem;
   background: ${(props) => props.theme.backgroundColorAlt};
   color: ${(props) => props.theme.textColor};
+  margin-bottom: 3rem;
+
+  &:focus {
+    border: 2px solid red;
+  }
 
   ${(props) =>
     props.$invalid &&

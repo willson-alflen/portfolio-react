@@ -7,7 +7,7 @@ export default function Projects() {
   const { projects } = useContext(ProjectsContext)
 
   return (
-    <S.ProjectsSection id="projects">
+    <S.ProjectsSection id="projects" tabIndex={0}>
       <S.ProjectsContainer>
         <S.ProjectsHeading>
           <h2>Projects</h2>

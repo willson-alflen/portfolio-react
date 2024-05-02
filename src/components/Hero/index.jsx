@@ -19,7 +19,9 @@ export default function Hero() {
           both beautiful and functional.
         </S.HeroDescription>
         <S.HeroCTA>
-          <a to="#projects">See my projects</a>
+          <a href="#projects" aria-label="See my projects">
+            See my projects
+          </a>
         </S.HeroCTA>
       </S.HeroContent>
 

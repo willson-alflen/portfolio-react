@@ -50,6 +50,11 @@ const GlobalStyles = createGlobalStyle`
     max-width: 100%;
     height: auto;
   }
+
+  :focus {
+    outline: none;
+    border: 2px solid red;    
+  }
 `
 
 export default GlobalStyles
