@@ -22,8 +22,8 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <GlobalStyles />
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+        <GlobalStyles />
         <ProjectsProvider>
           <ToastContainer />
           <BrowserRouter>

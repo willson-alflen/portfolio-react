@@ -4,7 +4,7 @@ import { MdFileDownload } from 'react-icons/md'
 export default function Resume() {
   return (
     <S.Resume>
-      <S.ResumeWrapper>
+      <S.ResumeWrapper tabIndex={0} aria-label="Willson Alflen Resume">
         <S.ResumeDownload>
           <a
             href="/willson-alflen-resume.pdf"
@@ -16,7 +16,7 @@ export default function Resume() {
           </a>
         </S.ResumeDownload>
 
-        <S.ResumeHeader>
+        <S.ResumeHeader tabIndex="0" aria-label="Contact info">
           <S.ResumeHeaderInfo>
             <S.ResumeHeaderInfoTitle>Willson Alflen</S.ResumeHeaderInfoTitle>
             <S.ResumeHeaderInfoLinks>
@@ -74,9 +74,11 @@ export default function Resume() {
         </S.ResumeHeader>
 
         <S.ResumeContent>
-          <S.ResumeContentTitle>Front-end Developer</S.ResumeContentTitle>
+          <S.ResumeContentTitle tabIndex="0" aria-label={`Developer's role`}>
+            Front-end Developer
+          </S.ResumeContentTitle>
 
-          <S.ResumeContentSection>
+          <S.ResumeContentSection tabIndex={0} aria-label="Summary">
             <S.ResumeContentSectionTitle>Summary</S.ResumeContentSectionTitle>
             <S.ResumeContentSectionBody>
               <p>
@@ -105,7 +107,7 @@ export default function Resume() {
             </S.ResumeContentSectionBody>
           </S.ResumeContentSection>
 
-          <S.ResumeContentSection>
+          <S.ResumeContentSection tabIndex={0} aria-label="Skills">
             <S.ResumeContentSectionTitle>Skills</S.ResumeContentSectionTitle>
             <S.ResumeContentSectionBody>
               <p>
@@ -118,150 +120,158 @@ export default function Resume() {
             </S.ResumeContentSectionBody>
           </S.ResumeContentSection>
 
-          <S.ResumeContentSection>
+          <S.ResumeContentSection tabIndex={0} aria-label="Course Projects">
             <S.ResumeContentSectionTitle>
               Course Projects
             </S.ResumeContentSectionTitle>
             <S.ResumeContentSectionBody>
               <S.ResumeContentSectionBodyItem className="project">
-                <S.ResumeContentSectionBodyItemTitle>
-                  <div>
-                    <span>
-                      E-commerce Website (iFood inspired) - React & Redux
-                    </span>
-                    <span>2023</span>
-                  </div>
+                <S.ResumeContentSectionBodyItemTitle
+                  tabIndex={0}
+                  aria-label="Project"
+                >
+                  E-commerce Website (iFood inspired) - React & Redux
+                  <span>2023</span>
                 </S.ResumeContentSectionBodyItemTitle>
                 <S.ResumeContentSectionBodyItemDescription>
-                  <p>
-                    - <b>Planning and design:</b> Defining the requirements of
-                    the application, including functionalities, features and
-                    user interface design;
-                  </p>
-                  <p>
-                    - <b>Development environment setup:</b> Initial project
-                    setup using Vite and other tools like Prettier and Eslint;
-                  </p>
-                  <p>
-                    - <b>User Interface (UI) development:</b> Creation of React
-                    components, rendering pages for each restaurant and their
-                    respective menus, and adding products to the shopping cart;
-                  </p>
-                  <p>
-                    - <b>Styling:</b> Styling of components using the Styled
-                    Components library;
-                  </p>
-                  <p>
-                    - <b>Routing configuration:</b> Use of the React Router
-                    library for navigation between pages;
-                  </p>
-                  <p>
-                    - <b>Redux setup:</b> Installation of the Redux and React
-                    Redux libraries, creation and implemention of reducers and
-                    the Redux store;
-                  </p>
-                  <p>
-                    - <b>API communication:</b> Use of fetch requests both to
-                    populate the site&apos;s content and to complete the
-                    purchase of items in the cart;
-                  </p>
-                  <p>
-                    - <b>Deployment:</b> Project deployment at Vercel.
-                  </p>
+                  <ul>
+                    <li>
+                      <b>Planning and design:</b> Defining the requirements of
+                      the application, including functionalities, features and
+                      user interface design;
+                    </li>
+                    <li>
+                      <b>Development environment setup:</b> Initial project
+                      setup using Vite and other tools like Prettier and Eslint;
+                    </li>
+                    <li>
+                      <b>User Interface (UI) development:</b> Creation of React
+                      components, rendering pages for each restaurant and their
+                      respective menus, and adding products to the shopping
+                      cart;
+                    </li>
+                    <li>
+                      <b>Styling:</b> Styling of components using the Styled
+                      Components library;
+                    </li>
+                    <li>
+                      <b>Routing configuration:</b> Use of the React Router
+                      library for navigation between pages;
+                    </li>
+                    <li>
+                      <b>Redux setup:</b> Installation of the Redux and React
+                      Redux libraries, creation and implemention of reducers and
+                      the Redux store;
+                    </li>
+                    <li>
+                      <b>API communication:</b> Use of fetch requests both to
+                      populate the site&apos;s content and to complete the
+                      purchase of items in the cart;
+                    </li>
+                    <li>
+                      <b>Deployment:</b> Project deployment at Vercel.
+                    </li>
+                  </ul>
                 </S.ResumeContentSectionBodyItemDescription>
               </S.ResumeContentSectionBodyItem>
 
               <S.ResumeContentSectionBodyItem className="project">
-                <S.ResumeContentSectionBodyItemTitle>
-                  <div>
-                    <span>Contact List - React & Redux</span>
-                    <span>2023</span>
-                  </div>
+                <S.ResumeContentSectionBodyItemTitle
+                  tabIndex={0}
+                  aria-label="Project"
+                >
+                  Contact List - React & Redux
+                  <span>2023</span>
                 </S.ResumeContentSectionBodyItemTitle>
                 <S.ResumeContentSectionBodyItemDescription>
-                  <p>
-                    - <b>Planning and design:</b> Definition of application
-                    requirements, including functionalities, features and user
-                    interface design;
-                  </p>
-                  <p>
-                    - <b>Development environment setup:</b> Initial project
-                    setup using Vite and other tools like Prettier and Eslint;
-                  </p>
-                  <p>
-                    - <b>User Interface (UI) development:</b> Creation of React
-                    components, rendering of the contact list, and addition of
-                    functionalities (adding, editing, and deleting contacts);
-                  </p>
-                  <p>
-                    - <b>Styling:</b> Styling of components using the Styled
-                    Components library;
-                  </p>
-                  <p>
-                    - <b>Redux setup:</b> Installation of the Redux and React
-                    Redux libraries, creation and implementation of reducers and
-                    the Redux store;
-                  </p>
-                  <p>
-                    - <b>Deployment:</b> Project deployment at Vercel.
-                  </p>
+                  <ul>
+                    <li>
+                      <b>Planning and design:</b> Definition of application
+                      requirements, including functionalities, features and user
+                      interface design;
+                    </li>
+                    <li>
+                      <b>Development environment setup:</b> Initial project
+                      setup using Vite and other tools like Prettier and Eslint;
+                    </li>
+                    <li>
+                      <b>User Interface (UI) development:</b> Creation of React
+                      components, rendering of the contact list, and addition of
+                      functionalities (adding, editing, and deleting contacts);
+                    </li>
+                    <li>
+                      <b>Styling:</b> Styling of components using the Styled
+                      Components library;
+                    </li>
+                    <li>
+                      <b>Redux setup:</b> Installation of the Redux and React
+                      Redux libraries, creation and implementation of reducers
+                      and the Redux store;
+                    </li>
+                    <li>
+                      <b>Deployment:</b> Project deployment at Vercel.
+                    </li>
+                  </ul>
                 </S.ResumeContentSectionBodyItemDescription>
               </S.ResumeContentSectionBodyItem>
 
               <S.ResumeContentSectionBodyItem className="project">
-                <S.ResumeContentSectionBodyItemTitle>
-                  <div>
-                    <span>Mission Impossible Landing - Gulp & Sass</span>
-                    <span>2023</span>
-                  </div>
+                <S.ResumeContentSectionBodyItemTitle
+                  tabIndex={0}
+                  aria-label="Project"
+                >
+                  Mission Impossible Landing - Gulp & Sass
+                  <span>2023</span>
                 </S.ResumeContentSectionBodyItemTitle>
                 <S.ResumeContentSectionBodyItemDescription>
-                  <p>
-                    - <b>Planning and design:</b> Definition of application
-                    requirements, including functionalities, features, and user
-                    interface design;
-                  </p>
-                  <p>
-                    - <b>Development environment setup:</b> Initial project
-                    setup and installation of npm packages and tools such as
-                    Sass and Gulp;
-                  </p>
-                  <p>
-                    - <b>HTML development:</b> Creation of the website&apos;s
-                    HTML structure, including header, body and footer and links
-                    to css and javascript files;
-                  </p>
-                  <p>
-                    - <b>CSS development with Sass:</b> CSS styling using the
-                    Sass language for better organization, use of variables,
-                    mixins and nesting to improve code readability, compilation
-                    of Sass code into CSS using Gulp;
-                  </p>
-                  <p>- Compiling Sass code into CSS using Gulp;</p>
-                  <p>
-                    - <b>JavaScript development:</b> Implementation of the
-                    website&apos;s interactivity logic using JavaScript,
-                    creating functions and events to respond to user actions.
-                  </p>
-                  <p>
-                    - <b>Performance optimization:</b> Minification and
-                    compression of CSS and JavaScript files; Optimizing images
-                    and other features for fast loading.
-                  </p>
-                  <p>
-                    - <b>Responsive Design:</b> Ensuring the site is responsive
-                    and works well on mobile devices using CSS media queries to
-                    adjust the layout on different screen sizes.
-                  </p>
-                  <p>
-                    - <b>Deployment:</b> Project deployment at Vercel.
-                  </p>
+                  <ul>
+                    <li>
+                      <b>Planning and design:</b> Definition of application
+                      requirements, including functionalities, features, and
+                      user interface design;
+                    </li>
+                    <li>
+                      <b>Development environment setup:</b> Initial project
+                      setup and installation of npm packages and tools such as
+                      Sass and Gulp;
+                    </li>
+                    <li>
+                      <b>HTML development:</b> Creation of the website&apos;s
+                      HTML structure, including header, body and footer and
+                      links to css and javascript files;
+                    </li>
+                    <li>
+                      <b>CSS development with Sass:</b> CSS styling using the
+                      Sass language for better organization, use of variables,
+                      mixins and nesting to improve code readability,
+                      compilation of Sass code into CSS using Gulp;
+                    </li>
+                    <li>Compiling Sass code into CSS using Gulp;</li>
+                    <li>
+                      <b>JavaScript development:</b> Implementation of the
+                      website&apos;s interactivity logic using JavaScript,
+                      creating functions and events to respond to user actions.
+                    </li>
+                    <li>
+                      <b>Performance optimization:</b> Minification and
+                      compression of CSS and JavaScript files; Optimizing images
+                      and other features for fast loading.
+                    </li>
+                    <li>
+                      <b>Responsive Design:</b> Ensuring the site is responsive
+                      and works well on mobile devices using CSS media queries
+                      to adjust the layout on different screen sizes.
+                    </li>
+                    <li>
+                      <b>Deployment:</b> Project deployment at Vercel.
+                    </li>
+                  </ul>
                 </S.ResumeContentSectionBodyItemDescription>
               </S.ResumeContentSectionBodyItem>
             </S.ResumeContentSectionBody>
           </S.ResumeContentSection>
 
-          <S.ResumeContentSection>
+          <S.ResumeContentSection tabIndex={0} aria-label="Education">
             <S.ResumeContentSectionTitle>Education</S.ResumeContentSectionTitle>
             <S.ResumeContentSectionBody>
               <S.ResumeContentSectionBodyItem>
@@ -281,7 +291,7 @@ export default function Resume() {
             </S.ResumeContentSectionBody>
           </S.ResumeContentSection>
 
-          <S.ResumeContentSection>
+          <S.ResumeContentSection tabIndex={0} aria-label="Spoken Languages">
             <S.ResumeContentSectionTitle>
               Spoken Languages
             </S.ResumeContentSectionTitle>
@@ -295,17 +305,15 @@ export default function Resume() {
             </S.ResumeContentSectionBody>
           </S.ResumeContentSection>
 
-          <S.ResumeContentSection>
+          <S.ResumeContentSection tabIndex={0} aria-label="Experience">
             <S.ResumeContentSectionTitle>
               Experience
             </S.ResumeContentSectionTitle>
             <S.ResumeContentSectionBody>
               <S.ResumeContentSectionBodyItem>
                 <S.ResumeContentSectionBodyItemTitle>
-                  <div>
-                    <span>Mathematics Teacher</span>
-                    <span>2016 - 2023</span>
-                  </div>
+                  Mathematics Teacher
+                  <span>2016 - 2023</span>
                 </S.ResumeContentSectionBodyItemTitle>
                 <S.ResumeContentSectionBodyItemDescription>
                   <p>

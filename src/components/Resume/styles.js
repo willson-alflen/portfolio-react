@@ -38,7 +38,7 @@ export const ResumeDownload = styled.div`
   }
 `
 
-export const ResumeHeader = styled.div`
+export const ResumeHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -93,7 +93,7 @@ export const ResumeContentTitle = styled.h2`
   margin-bottom: 2rem;
 `
 
-export const ResumeContentSection = styled.div`
+export const ResumeContentSection = styled.section`
   margin-bottom: 2rem;
 `
 
@@ -112,7 +112,7 @@ export const ResumeContentSectionBody = styled.div`
   }
 `
 
-export const ResumeContentSectionBodyItem = styled.div`
+export const ResumeContentSectionBodyItem = styled.article`
   margin-bottom: 0.5rem;
 
   &.project {
@@ -125,20 +125,19 @@ export const ResumeContentSectionBodyItem = styled.div`
 `
 
 export const ResumeContentSectionBodyItemTitle = styled.h3`
-  div {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 3px solid ${(props) => props.theme.backgroundColorAlt2};
-    margin-bottom: 0.5rem;
-  }
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid ${(props) => props.theme.backgroundColorAlt2};
+  margin-bottom: 0.5rem;
 
   span {
     display: inline-block;
   }
 `
 
-export const ResumeContentSectionBodyItemCompany = styled.h4``
-
-export const ResumeContentSectionBodyItemDate = styled.p``
-
-export const ResumeContentSectionBodyItemDescription = styled.div``
+export const ResumeContentSectionBodyItemDescription = styled.ul`
+  li {
+    list-style-type: disc;
+    margin-left: 2.5rem;
+  }
+`

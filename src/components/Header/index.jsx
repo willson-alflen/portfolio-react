@@ -57,28 +57,56 @@ export default function Header() {
       </Link>
 
       <S.HeaderNav ref={menuRef}>
-        <S.Hamburger>
-          <MdMenu
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="hamburger-icon"
-          />
+        <S.Hamburger
+          tabIndex={0}
+          role="button"
+          aria-label="Open/Close menu"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onKeyDown={(e) => e.key === 'Enter' && setIsMenuOpen(!isMenuOpen)}
+        >
+          <MdMenu className="hamburger-icon" />
         </S.Hamburger>
         <S.NavLinks $isOpen={isMenuOpen}>
           {isHomePage ? (
             <>
-              <a href="#hero" className="nav-link" onClick={closeMenu}>
+              <a
+                href="#hero"
+                className="nav-link"
+                aria-label="Home"
+                onClick={closeMenu}
+              >
                 Home
               </a>
-              <a href="#projects" className="nav-link" onClick={closeMenu}>
+              <a
+                href="#projects"
+                className="nav-link"
+                aria-label="Projects"
+                onClick={closeMenu}
+              >
                 Projects
               </a>
-              <a href="#about" className="nav-link" onClick={closeMenu}>
+              <a
+                href="#about"
+                className="nav-link"
+                aria-label="About"
+                onClick={closeMenu}
+              >
                 About
               </a>
-              <a href="#contact" className="nav-link" onClick={closeMenu}>
+              <a
+                href="#contact"
+                className="nav-link"
+                aria-label="Contact"
+                onClick={closeMenu}
+              >
                 Contact
               </a>
-              <Link to="/resume" className="nav-link" onClick={closeMenu}>
+              <Link
+                to="/resume"
+                className="nav-link"
+                aria-label="Resume"
+                onClick={closeMenu}
+              >
                 Resume
               </Link>
             </>
@@ -87,6 +115,7 @@ export default function Header() {
               <Link
                 to={{ pathname: '/', hash: '#hero' }}
                 className="nav-link"
+                aria-label="Home"
                 onClick={closeMenu}
               >
                 Home
@@ -94,6 +123,7 @@ export default function Header() {
               <Link
                 to={{ pathname: '/', hash: '#projects' }}
                 className="nav-link"
+                aria-label="Projects"
                 onClick={closeMenu}
               >
                 Projects
@@ -101,6 +131,7 @@ export default function Header() {
               <Link
                 to={{ pathname: '/', hash: '#about' }}
                 className="nav-link"
+                aria-label="About"
                 onClick={closeMenu}
               >
                 About
@@ -108,18 +139,30 @@ export default function Header() {
               <Link
                 to={{ pathname: '/', hash: '#contact' }}
                 className="nav-link"
+                aria-label="Contact"
                 onClick={closeMenu}
               >
                 Contact
               </Link>
-              <Link to="/resume" className="nav-link" onClick={closeMenu}>
+              <Link
+                to="/resume"
+                className="nav-link"
+                aria-label="Resume"
+                onClick={closeMenu}
+              >
                 Resume
               </Link>
             </>
           )}
         </S.NavLinks>
-        <S.ToggleTheme>
-          <MdOutlineLightMode onClick={toggleTheme} />
+        <S.ToggleTheme
+          tabIndex={0}
+          role="button"
+          aria-label="Toggle Theme"
+          onClick={toggleTheme}
+          onKeyDown={(e) => e.key === 'Enter' && toggleTheme()}
+        >
+          <MdOutlineLightMode />
         </S.ToggleTheme>
       </S.HeaderNav>
     </S.Header>

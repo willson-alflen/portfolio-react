@@ -2,7 +2,7 @@ import * as S from './styles'
 
 export default function About() {
   return (
-    <S.About id="about">
+    <S.About id="about" tabIndex={0}>
       <S.AboutContainer>
         <S.AboutHeading>
           <h2>About Me</h2>

@@ -6,7 +6,7 @@ import WhatsappIcon from '../../assets/images/whatsapp-ico.png'
 
 export default function Footer() {
   return (
-    <S.Footer>
+    <S.Footer tabIndex={0}>
       <S.FooterContainer>
         <S.FooterText>
           <S.Heading className="developer">Willson Alflen</S.Heading>
