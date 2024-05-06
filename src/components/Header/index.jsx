@@ -101,14 +101,13 @@ export default function Header() {
               >
                 Contact
               </a>
-              <Link
+              <S.StyledNavLink
                 to="/resume"
-                className="nav-link"
                 aria-label="Resume"
                 onClick={closeMenu}
               >
                 Resume
-              </Link>
+              </S.StyledNavLink>
             </>
           ) : (
             <>
@@ -144,14 +143,13 @@ export default function Header() {
               >
                 Contact
               </Link>
-              <Link
+              <S.StyledNavLink
                 to="/resume"
-                className="nav-link"
                 aria-label="Resume"
                 onClick={closeMenu}
               >
                 Resume
-              </Link>
+              </S.StyledNavLink>
             </>
           )}
         </S.NavLinks>

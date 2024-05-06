@@ -51,7 +51,7 @@ const GlobalStyles = createGlobalStyle`
     height: auto;
   }
 
-  :focus {
+  .focus-visible {
     outline: none;
     border: 2px solid red;    
   }
