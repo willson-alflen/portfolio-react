@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 export const Header = styled.header`
   position: fixed;
@@ -122,6 +123,12 @@ export const NavLinks = styled.div`
   @media (max-width: 375px) {
     top: 72px;
     font-size: 0.9rem;
+  }
+`
+
+export const StyledNavLink = styled(NavLink)`
+  &.active {
+    color: ${(props) => props.theme.mainColor};
   }
 `
 
