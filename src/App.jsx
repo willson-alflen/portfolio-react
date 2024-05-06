@@ -8,6 +8,7 @@ import { darkTheme, lightTheme } from './components/Theme'
 import { ThemeContext } from './contexts/ThemeContext'
 import { ProjectsProvider } from './contexts/ProjectsContext'
 import ScrollToTopAndRoutes from './components/ScrollToTopAndRoutes'
+import 'focus-visible'
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
