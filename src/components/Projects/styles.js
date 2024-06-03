@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const ProjectsSection = styled.section`
   padding: 6rem 3rem;
+  background-color: ${(props) => props.theme.textColorAlt};
 `
 
 export const ProjectsContainer = styled.div`

@@ -2,11 +2,11 @@ import { useContext, useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import ProfilePicture from '../../assets/images/profile-picture.png'
 import { ThemeContext } from '../../contexts/ThemeContext'
-import { MdMenu, MdOutlineLightMode } from 'react-icons/md'
+import { MdMenu, MdOutlineLightMode, MdOutlineDarkMode } from 'react-icons/md'
 import * as S from './styles'
 
 export default function Header() {
-  const { toggleTheme } = useContext(ThemeContext)
+  const { theme, toggleTheme } = useContext(ThemeContext)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768)
   const menuRef = useRef(null)
@@ -160,7 +160,7 @@ export default function Header() {
           onClick={toggleTheme}
           onKeyDown={(e) => e.key === 'Enter' && toggleTheme()}
         >
-          <MdOutlineLightMode />
+          {theme === 'light' ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}
         </S.ToggleTheme>
       </S.HeaderNav>
     </S.Header>

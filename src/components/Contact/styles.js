@@ -76,7 +76,7 @@ export const ContactForm = styled.form`
   }
 
   button {
-    background: ${(props) => props.theme.mainColor};
+    background: ${(props) => props.theme.mainColorAlt};
     color: ${(props) => props.theme.textColorAlt};
     font-size: 1rem;
     font-weight: 600;

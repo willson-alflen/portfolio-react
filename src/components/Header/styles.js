@@ -21,7 +21,7 @@ export const Header = styled.header`
 export const HeaderBrand = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 `
 
 export const LogoContainer = styled.div`
@@ -44,8 +44,11 @@ export const Logo = styled.img`
 `
 
 export const HeaderBrandText = styled.span`
+  padding: 0 0.5rem;
+
   &:hover {
     color: ${(props) => props.theme.mainColor};
+    background-color: ${(props) => props.theme.backgroundColorAlt};
   }
 
   @media (max-width: 375px) {
@@ -58,8 +61,13 @@ export const HeaderNav = styled.nav`
   align-items: center;
   gap: 1rem;
 
+  a {
+    padding: 0 0.5rem;
+  }
+
   a:hover {
     color: ${(props) => props.theme.mainColor};
+    background-color: ${(props) => props.theme.backgroundColorAlt};
   }
 `
 
@@ -87,6 +95,7 @@ export const NavLinks = styled.div`
 
   .nav-link.active {
     color: ${(props) => props.theme.mainColor};
+    background-color: ${(props) => props.theme.backgroundColorAlt};
   }
 
   @media (max-width: 768px) {
@@ -114,7 +123,7 @@ export const NavLinks = styled.div`
 
           &:hover {
             color: ${props.theme.textColor};
-            background-color: ${props.theme.backgroundColorOpacity};
+            background-color: ${props.theme.backgroundColor};
           }
         }
       `}

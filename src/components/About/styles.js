@@ -146,7 +146,7 @@ export const AboutSkills = styled.div`
       font-weight: 500;
       color: ${(props) => props.theme.textColorAlt2};
       padding: 0.5rem 1rem;
-      background: ${(props) => props.theme.backgroundColorAlt2};
+      border: 2px solid ${(props) => props.theme.textColorAlt2};
       border-radius: 6px;
     }
   }

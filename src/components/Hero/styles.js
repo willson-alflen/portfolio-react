@@ -115,7 +115,7 @@ export const HeroCTA = styled.div`
 export const HeroSocials = styled.div`
   position: absolute;
   top: 50%;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid #eee;
   transform: translateY(-50%);
 
   @media (max-width: 900px) {
@@ -127,13 +127,13 @@ export const Social = styled.div`
   width: 4rem;
 
   &:not(:last-child) {
-    border-bottom: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid #eee;
   }
 
   a {
     width: 100%;
     display: block;
-    padding: 1.2rem;
+    padding: 1rem;
     transition: background 0.3s;
 
     &:hover {

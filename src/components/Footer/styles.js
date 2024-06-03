@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Footer = styled.footer`
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
+  background-color: ${(props) => props.theme.backgroundColorAlt2};
+  color: ${(props) => props.theme.textColorAlt};
   padding: 4rem;
 
   @media (max-width: 768px) {
@@ -32,7 +32,7 @@ export const Heading = styled.h3`
   margin-bottom: 2rem;
 
   &.developer {
-    color: rgb(255, 165, 0);
+    color: $(props) => props.theme.accentColor;
   }
 
   @media (max-width: 768px) {
