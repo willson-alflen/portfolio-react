@@ -138,6 +138,7 @@ export const NavLinks = styled.div`
 export const StyledNavLink = styled(NavLink)`
   &.active {
     color: ${(props) => props.theme.mainColor};
+    background-color: ${(props) => props.theme.backgroundColorAlt};
   }
 `
 

@@ -1,3 +1,5 @@
+import { TypeAnimation } from 'react-type-animation'
+import GraphemeSplitter from 'grapheme-splitter'
 import * as S from './styles'
 import LinkedinIcon from '../../assets/images/linkedin-ico.png'
 import GithubIcon from '../../assets/images/github-ico.png'
@@ -5,18 +7,43 @@ import GmailIcon from '../../assets/images/gmail-ico.png'
 import WhatsappIcon from '../../assets/images/whatsapp-ico.png'
 
 export default function Hero() {
+  const splitter = new GraphemeSplitter()
+
   return (
     <S.Hero id="hero">
       <S.HeroContent>
         <S.HeroHeading>
-          Hey, my name is <br />
+          <TypeAnimation
+            aria-label="Hello, my name is Willson Alflen"
+            role="marquee"
+            splitter={(str) => splitter.splitGraphemes(str)}
+            sequence={[
+              'Olá 🇧🇷',
+              3000,
+              'Hello 🇬🇧',
+              3000,
+              'Hola 🇪🇸',
+              3000,
+              'Bonjour 🇫🇷',
+              3000,
+              'Ciao 🇮🇹',
+              3000,
+              'Hallo 🇩🇪',
+              3000,
+              'こんにちは 🇯🇵',
+              3000,
+            ]}
+            repeat={Infinity}
+            speed={10}
+          />
+          <br /> my name is <br />
           <span>Willson Alflen</span>
         </S.HeroHeading>
         <S.HeroDescription>
-          I&apos;m a <strong>Front-end Developer</strong> based in Brazil. My
-          specialties are <strong>React</strong> and{' '}
-          <strong>Styled Components</strong>, and I love building apps that are
-          both beautiful and functional.
+          I&apos;m a <strong>Front-end Developer</strong> based in Brazil.
+          <br />
+          My specialties are <strong>React</strong> and{' '}
+          <strong>Styled Components</strong>.
         </S.HeroDescription>
         <S.HeroCTA>
           <a href="#projects" aria-label="See my projects">

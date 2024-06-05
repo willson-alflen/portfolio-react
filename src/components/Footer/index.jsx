@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { ThemeContext } from '../../contexts/ThemeContext'
 import * as S from './styles'
 import LinkedinIcon from '../../assets/images/linkedin-ico.png'
 import GithubIcon from '../../assets/images/github-ico.png'
@@ -5,6 +7,8 @@ import GmailIcon from '../../assets/images/gmail-ico.png'
 import WhatsappIcon from '../../assets/images/whatsapp-ico.png'
 
 export default function Footer() {
+  const { theme } = useContext(ThemeContext)
+
   return (
     <S.Footer tabIndex={0}>
       <S.FooterContainer>
@@ -25,6 +29,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Send me an email"
+            $theme={theme}
           >
             <img src={GmailIcon} alt="Gmail" />
           </S.SocialLink>
@@ -33,6 +38,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Send me a message on Whatsapp"
+            $theme={theme}
           >
             <img src={WhatsappIcon} alt="Whatsapp" />
           </S.SocialLink>
@@ -41,6 +47,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit my Linkedin profile"
+            $theme={theme}
           >
             <img src={LinkedinIcon} alt="Linkedin" />
           </S.SocialLink>
@@ -49,6 +56,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit my Github profile"
+            $theme={theme}
           >
             <img src={GithubIcon} alt="Github" />
           </S.SocialLink>

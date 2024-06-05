@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const ProjectsSection = styled.section`
   padding: 6rem 3rem;
-  background-color: ${(props) => props.theme.textColorAlt};
+  background-color: ${(props) => props.theme.backgroundColor};
+  color: ${(props) => props.theme.textColor};
 `
 
 export const ProjectsContainer = styled.div`
@@ -76,10 +77,10 @@ export const Project = styled.div`
     height: 100%;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.5s;
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.1) rotate(4deg);
     }
   }
 
@@ -120,9 +121,14 @@ export const ProjectIntro = styled.div`
     color: ${(props) => props.theme.textColorAlt};
     background-color: ${(props) => props.theme.mainColor};
     border-radius: 6px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+
+    &:hover {
+      background-color: ${(props) => props.theme.mainColorAlt};
+      transform: translateY(-5px);
+    }
   }
 
   @media (max-width: 968px) {

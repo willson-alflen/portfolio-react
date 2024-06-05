@@ -7,10 +7,10 @@ export const ProjectWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: ${(props) => props.theme.backgroundColorAlt};
 `
 
 export const ProjectHero = styled.section`
-  color: ${(props) => props.theme.textColorAlt};
   background: linear-gradient(
       to right,
       ${(props) => props.theme.mainColorOpacity},
@@ -37,6 +37,7 @@ export const ProjectContainer = styled.div`
 `
 
 export const ProjectHeading = styled.h1`
+  color: ${(props) => props.theme.textColorAlt};
   font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -60,6 +61,7 @@ export const ProjectHeading = styled.h1`
 `
 
 export const ProjectDescription = styled.p`
+  color: ${(props) => props.theme.textColorAlt};
   font-size: 1.25rem;
   width: 90%;
   max-width: 820px;
@@ -209,7 +211,7 @@ export const ProjectFeature = styled.div`
 
   p {
     font-size: 1.25rem;
-    color: ${(props) => props.theme.textColorAlt2};
+    color: ${(props) => props.theme.textColorAlt3};
   }
 
   @media (max-width: 768px) {
@@ -250,9 +252,9 @@ export const ProjectTechStack = styled.div`
 
     li {
       font-weight: 500;
-      color: ${(props) => props.theme.textColorAlt2};
+      color: ${(props) => props.theme.textColorAlt3};
       padding: 0.5rem 1rem;
-      border: 2px solid ${(props) => props.theme.textColorAlt2};
+      border: 2px solid ${(props) => props.theme.textColorAlt3};
       border-radius: 6px;
     }
   }

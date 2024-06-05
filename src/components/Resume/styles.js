@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+export const ResumeSection = styled.section`
+  background-color: ${(props) => props.theme.backgroundColorAlt};
+`
+
 export const Resume = styled.div`
   min-height: 100vh;
   max-width: 1020px;
@@ -12,6 +16,7 @@ export const ResumeWrapper = styled.div`
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   position: relative;
+  background-color: ${(props) => props.theme.textColorAlt};
 `
 
 export const ResumeDownload = styled.div`
@@ -99,7 +104,7 @@ export const ResumeContentSection = styled.section`
 
 export const ResumeContentSectionTitle = styled.h2`
   font-size: 1.5rem;
-  background-color: ${(props) => props.theme.backgroundColorAlt2};
+  background-color: ${(props) => props.theme.backgroundColorAlt};
   padding: 0.125rem 0.5rem;
   margin-bottom: 0.25rem;
 `
@@ -116,11 +121,7 @@ export const ResumeContentSectionBodyItem = styled.article`
   margin-bottom: 0.5rem;
 
   &.project {
-    margin-bottom: 1.5rem;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0.5rem;
   }
 `
 
@@ -128,10 +129,14 @@ export const ResumeContentSectionBodyItemTitle = styled.h3`
   display: flex;
   justify-content: space-between;
   border-bottom: 3px solid ${(props) => props.theme.backgroundColorAlt2};
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 
   span {
     display: inline-block;
+  }
+
+  &.process {
+    margin-top: 1rem;
   }
 `
 

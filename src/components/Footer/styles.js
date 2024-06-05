@@ -32,7 +32,7 @@ export const Heading = styled.h3`
   margin-bottom: 2rem;
 
   &.developer {
-    color: $(props) => props.theme.accentColor;
+    color: ${(props) => props.theme.accentColor};
   }
 
   @media (max-width: 768px) {
@@ -89,11 +89,9 @@ export const SocialLink = styled.a`
   img {
     width: 2rem;
     transition: filter 0.3s ease, transform 0.3s ease;
+    filter: ${({ $theme }) => ($theme === 'light' ? '' : 'invert(0.3)')};
 
     &:hover {
-      filter: ${({ theme }) =>
-        theme === 'light' ? 'invert(0.8)' : 'invert(0.2)'};
-
       transform: scale(1.1);
     }
   }
