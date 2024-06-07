@@ -8,7 +8,7 @@ export default function Resume() {
         <S.ResumeWrapper tabIndex={0} aria-label="Willson Alflen Resume">
           <S.ResumeDownload>
             <a
-              href="/willson-alflen-resume.pdf"
+              href="/willson-alflen-resume-en.pdf"
               download
               aria-label="Download Resume"
               title="Download Resume"
