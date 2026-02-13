@@ -1,9 +1,11 @@
-import { useEffect } from 'react'
+import { useEffect, lazy, Suspense } from 'react'
 import { useLocation, Routes, Route } from 'react-router-dom'
-import GlobalLayout from '../GlobalLayout'
-import Home from '../../pages/Home'
-import ProjectDetail from '../../pages/ProjectDetail'
-import ResumePage from '../../pages/Resume'
+import GlobalLayout from '@/components/GlobalLayout'
+import Loading from '@/components/Loading'
+
+const Home = lazy(() => import('@/pages/Home'))
+const ProjectDetail = lazy(() => import('@/pages/ProjectDetail'))
+const ResumePage = lazy(() => import('@/pages/Resume'))
 
 export default function ScrollToTopAndRoutes() {
   const location = useLocation()
@@ -20,12 +22,14 @@ export default function ScrollToTopAndRoutes() {
   }, [location])
 
   return (
-    <Routes>
-      <Route path="/" element={<GlobalLayout />}>
-        <Route index element={<Home />} />
-        <Route path="/:projectName" element={<ProjectDetail />} />
-        <Route path="/resume" element={<ResumePage />} />
-      </Route>
-    </Routes>
+    <Suspense fallback={<Loading />}>
+      <Routes>
+        <Route path="/" element={<GlobalLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/:projectName" element={<ProjectDetail />} />
+          <Route path="/resume" element={<ResumePage />} />
+        </Route>
+      </Routes>
+    </Suspense>
   )
 }

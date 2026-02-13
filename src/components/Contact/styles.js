@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import CommonBG from '../../assets/svg/common-bg.svg'
+import CommonBG from '@/assets/svg/common-bg.svg'
 
 export const Contact = styled.section`
   color: ${(props) => props.theme.textColorAlt};

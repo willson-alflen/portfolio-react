@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { ProjectsContext } from '../../contexts/ProjectsContext'
+import { ProjectsContext } from '@/contexts/ProjectsContext'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import * as S from './styles'

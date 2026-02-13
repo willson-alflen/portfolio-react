@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import ProfilePicture from '../../assets/images/profile-picture.png'
-import { ThemeContext } from '../../contexts/ThemeContext'
+import ProfilePicture from '@/assets/images/profile-picture.png'
+import { ThemeContext } from '@/contexts/ThemeContext'
 import { MdMenu, MdOutlineLightMode, MdOutlineDarkMode } from 'react-icons/md'
 import * as S from './styles'
 

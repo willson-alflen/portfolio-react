@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
-import Hero from '../../components/Hero'
-import Projects from '../../components/Projects'
-import About from '../../components/About'
-import Contact from '../../components/Contact'
+import Hero from '@/components/Hero'
+import Projects from '@/components/Projects'
+import About from '@/components/About'
+import Contact from '@/components/Contact'
+import SEO from '@/components/SEO'
 
 export default function Home() {
   useEffect(() => {
@@ -48,6 +49,7 @@ export default function Home() {
 
   return (
     <>
+      <SEO title="Willson Alflen | Front-end Developer" />
       <Hero />
       <Projects />
       <About />

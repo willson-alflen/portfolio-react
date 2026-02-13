@@ -1,15 +1,9 @@
-import { useContext } from 'react'
-import { useParams } from 'react-router-dom'
-import { ProjectsContext } from '../../contexts/ProjectsContext'
+import { useProject } from '@/hooks/useProject'
 import PuffLoader from 'react-spinners/PuffLoader'
 import * as S from './styles'
 
 export default function Project() {
-  const { projectName } = useParams()
-  const { projects } = useContext(ProjectsContext)
-  const currentProject = projects.find(
-    (project) => project.name.replace(' ', '-') === projectName
-  )
+  const { project: currentProject } = useProject()
 
   if (!currentProject) {
     return (

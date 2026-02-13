@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react'
-import { getProjects } from '../../db/firebase'
+import { getProjects } from '@/db/firebase'
 import { toast } from 'react-toastify'
 import PropTypes from 'prop-types'
 

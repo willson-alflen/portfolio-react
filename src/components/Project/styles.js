@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import CommonBG from '../../assets/svg/common-bg.svg'
+import CommonBG from '@/assets/svg/common-bg.svg'
 import { Link } from 'react-router-dom'
 
 export const ProjectWrapper = styled.div`

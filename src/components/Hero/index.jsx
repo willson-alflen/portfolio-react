@@ -1,10 +1,10 @@
 import { TypeAnimation } from 'react-type-animation'
 import GraphemeSplitter from 'grapheme-splitter'
 import * as S from './styles'
-import LinkedinIcon from '../../assets/images/linkedin-ico.png'
-import GithubIcon from '../../assets/images/github-ico.png'
-import GmailIcon from '../../assets/images/gmail-ico.png'
-import WhatsappIcon from '../../assets/images/whatsapp-ico.png'
+import LinkedinIcon from '@/assets/images/linkedin-ico.png'
+import GithubIcon from '@/assets/images/github-ico.png'
+import GmailIcon from '@/assets/images/gmail-ico.png'
+import WhatsappIcon from '@/assets/images/whatsapp-ico.png'
 
 export default function Hero() {
   const splitter = new GraphemeSplitter()

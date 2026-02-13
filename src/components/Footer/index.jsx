@@ -1,10 +1,10 @@
 import { useContext } from 'react'
-import { ThemeContext } from '../../contexts/ThemeContext'
+import { ThemeContext } from '@/contexts/ThemeContext'
 import * as S from './styles'
-import LinkedinIcon from '../../assets/images/linkedin-ico.png'
-import GithubIcon from '../../assets/images/github-ico.png'
-import GmailIcon from '../../assets/images/gmail-ico.png'
-import WhatsappIcon from '../../assets/images/whatsapp-ico.png'
+import LinkedinIcon from '@/assets/images/linkedin-ico.png'
+import GithubIcon from '@/assets/images/github-ico.png'
+import GmailIcon from '@/assets/images/gmail-ico.png'
+import WhatsappIcon from '@/assets/images/whatsapp-ico.png'
 
 export default function Footer() {
   const { theme } = useContext(ThemeContext)
