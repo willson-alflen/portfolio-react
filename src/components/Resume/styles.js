@@ -48,13 +48,25 @@ export const ResumeHeader = styled.header`
   justify-content: space-between;
   align-items: end;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const ResumeHeaderInfo = styled.div`
   padding: 1rem 0;
   width: 50%;
   border-right: 1px solid ${(props) => props.theme.mainColor};
+
+  @media (max-width: 768px) {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid ${(props) => props.theme.mainColor};
+    margin-bottom: 1rem;
+  }
 `
 
 export const ResumeHeaderInfoTitle = styled.h1``
@@ -76,6 +88,10 @@ export const ResumeHeaderInfoLinks = styled.div`
 export const ResumeHeaderContact = styled.div`
   padding: 1rem 0;
   width: 50%;
+
+   @media (max-width: 768px) {
+    width: 100%;
+  }
   span {
     display: block;
 
@@ -118,6 +134,7 @@ export const ResumeContentSectionBody = styled.div`
 `
 
 export const ResumeContentSectionBodyItem = styled.article`
+  margin-left: 2rem;
   margin-bottom: 0.5rem;
 
   &.project {

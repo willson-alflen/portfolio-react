@@ -5,7 +5,7 @@ export default function Resume() {
   return (
     <S.ResumeSection>
       <S.Resume>
-        <S.ResumeWrapper tabIndex={0} aria-label="Willson Alflen Resume">
+        <S.ResumeWrapper>
           <S.ResumeDownload>
             <a
               href="/willson-alflen-resume.pdf"
@@ -17,7 +17,7 @@ export default function Resume() {
             </a>
           </S.ResumeDownload>
 
-          <S.ResumeHeader tabIndex="0" aria-label="Contact info">
+          <S.ResumeHeader>
             <S.ResumeHeaderInfo>
               <S.ResumeHeaderInfoTitle>Willson Alflen</S.ResumeHeaderInfoTitle>
               <S.ResumeHeaderInfoLinks>
@@ -29,9 +29,10 @@ export default function Resume() {
                     aria-label="Linkedin Profile"
                     title="Visit my Linkedin Profile"
                   >
-                    https://www.linkedin.com/in/willson-alflen/
+                    LinkedIn
                   </a>
                 </span>
+                <span>&nbsp;|&nbsp;</span>
                 <span>
                   <a
                     href="https://github.com/willson-alflen"
@@ -40,9 +41,21 @@ export default function Resume() {
                     aria-label="GitHub Profile"
                     title="Visit my GitHub Profile"
                   >
-                    https://github.com/willson-alflen
+                    GitHub
                   </a>
                 </span>
+                <span>&nbsp;|&nbsp;</span>
+                <span>
+                <a
+                  href="https://api.whatsapp.com/send?phone=5549988896193"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Send a message on Whatsapp"
+                  title="Send me a message on Whatsapp"
+                >
+                  WhatsApp
+                </a>
+              </span>
               </S.ResumeHeaderInfoLinks>
             </S.ResumeHeaderInfo>
 
@@ -60,281 +73,182 @@ export default function Resume() {
                   willson.alflen@gmail.com
                 </a>
               </span>
-              <span>
-                <a
-                  href="https://api.whatsapp.com/send?phone=5547999999999"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Send a message on Whatsapp"
-                  title="Send me a message on Whatsapp"
-                >
-                  +55 49 98889-6193
-                </a>
-              </span>
             </S.ResumeHeaderContact>
           </S.ResumeHeader>
 
           <S.ResumeContent>
-            <S.ResumeContentTitle tabIndex="0" aria-label={`Developer's role`}>
-              Frontend Developer
+            <S.ResumeContentTitle>
+              Education Technology Specialist
             </S.ResumeContentTitle>
 
-            <S.ResumeContentSection tabIndex={0} aria-label="Summary">
+            <S.ResumeContentSection>
               <S.ResumeContentSectionTitle>Summary</S.ResumeContentSectionTitle>
               <S.ResumeContentSectionBody>
                 <p>
-                  I&apos;m a junior front-end developer proficient in React. I
-                  bring a unique blend of skills honed from my previous career
-                  as a mathematics teacher. My teaching background has equipped
-                  me with invaluable collaboration and problem-solving
-                  abilities, which I&apos;m eager to leverage in the dynamic
-                  world of technology.
+                  Education Specialist with 10+ years in education and 
+                  2 years leading pedagogical consulting and technology implementation 
+                  projects across 10+ public schools, impacting over 5,000 students.
                 </p>
                 <p>
-                  I thrive on challenges and am committed to continuous learning
-                  and growth in my career. I&apos;m on the lookout for
-                  opportunities that not only allow me to contribute effectively
-                  to web projects but also enable me to bring fresh perspectives
-                  to the team.
+                  Experienced in designing scalable programming curricula aligned with national standards (BNCC), training and mentoring 12 instructors, standardizing teaching methodologies, and participating in pedagogical and business-level decision-making.
                 </p>
                 <p>
-                  I&apos;m excited about the prospect of contributing to real
-                  world projects and making meaningful contributions while
-                  embarking on this exhilarating journey of self-improvement and
-                  professional development.
+                  Combines systems thinking, leadership in educational innovation, and hands-on frontend expertise (React) to design, implement, and scale technology-driven learning ecosystems.
+                </p>
+                <p>
+                  Positioning for leadership roles in Educational Technology Strategy, Coordination, and EdTech Innovation.
                 </p>
               </S.ResumeContentSectionBody>
             </S.ResumeContentSection>
 
-            <S.ResumeContentSection tabIndex={0} aria-label="Spoken Languages">
+            <S.ResumeContentSection>
               <S.ResumeContentSectionTitle>
-                Spoken Languages
+                Leadership & Strategic Impact
               </S.ResumeContentSectionTitle>
               <S.ResumeContentSectionBody>
-                <S.ResumeContentSectionBodyItem>
-                  <b>Portuguese</b> - Native
-                </S.ResumeContentSectionBodyItem>
-                <S.ResumeContentSectionBodyItem>
-                  <b>English</b> - Upper Intermediate
-                </S.ResumeContentSectionBodyItem>
-              </S.ResumeContentSectionBody>
-            </S.ResumeContentSection>
-
-            <S.ResumeContentSection tabIndex={0} aria-label="Skills">
-              <S.ResumeContentSectionTitle>Skills</S.ResumeContentSectionTitle>
-              <S.ResumeContentSectionBody>
-                <p>
-                  HTML, CSS, JavaScript, JQuery, Webpack, Gulp, Grunt,
-                  Bootstrap, Sass, Less, React, Styled Components, Responsive
-                  Design, REST Api&apos;s, Firebase, Jest, Cypress, Figma, Web
-                  Performance, Web Accessibility, SEO, Local Storage, Cookies,
-                  Authentication, Git, Github.
-                </p>
-              </S.ResumeContentSectionBody>
-            </S.ResumeContentSection>
-
-            <S.ResumeContentSection tabIndex={0} aria-label="Personal Projects">
-              <S.ResumeContentSectionTitle>
-                Personal Projects
-              </S.ResumeContentSectionTitle>
-              <S.ResumeContentSectionBody>
-                <S.ResumeContentSectionBodyItemTitle>
-                  Projects
-                </S.ResumeContentSectionBodyItemTitle>
-                <S.ResumeContentSectionBodyItem
-                  className="project"
-                  tabIndex={0}
-                  aria-label="Project"
-                >
-                  <b>Portfolio Website - React & Styled Components</b>
-                </S.ResumeContentSectionBodyItem>
-
-                <S.ResumeContentSectionBodyItem
-                  className="project"
-                  tabIndex={0}
-                  aria-label="Project"
-                >
-                  <b>Chat App - React & Firebase</b>
-                </S.ResumeContentSectionBodyItem>
-
-                <S.ResumeContentSectionBodyItem
-                  className="project"
-                  tabIndex={0}
-                  aria-label="Project"
-                >
-                  <b>VanLife (car rental app) - React & React Router Dom</b>
-                </S.ResumeContentSectionBodyItem>
-
-                <S.ResumeContentSectionBodyItem
-                  className="project"
-                  tabIndex={0}
-                  aria-label="Project"
-                >
-                  <b>E-commerce Website (ifood inspired) - React & Redux</b>
-                </S.ResumeContentSectionBodyItem>
-
-                <S.ResumeContentSectionBodyItem
-                  className="project"
-                  tabIndex={0}
-                  aria-label="Project"
-                >
-                  <b>Contact List - React & Redux</b>
-                </S.ResumeContentSectionBodyItem>
-
-                <S.ResumeContentSectionBodyItem
-                  className="project"
-                  tabIndex={0}
-                  aria-label="Project"
-                >
-                  <b>Disney Plus (landing page clone) - React & Gulp & Sass</b>
-                </S.ResumeContentSectionBodyItem>
-
-                <S.ResumeContentSectionBodyItem
-                  className="project"
-                  tabIndex={0}
-                  aria-label="Project"
-                >
-                  <b>Mission Impossible Landing - React & Gulp & Sass</b>
-                </S.ResumeContentSectionBodyItem>
-
-                <S.ResumeContentSectionBodyItemTitle className="process">
-                  Overall Development Process
-                </S.ResumeContentSectionBodyItemTitle>
-
                 <S.ResumeContentSectionBodyItemDescription>
                   <li>
-                    <b>Planning and design:</b> Definition of application
-                    requirements, including functionalities, features and user
-                    interface design;
+                    Led curriculum restructuring for programming education across 10+ public schools.
                   </li>
                   <li>
-                    <b>Development environment setup:</b> Initial project setup
-                    using tools like Vite, Gulp, and npm packages; Installation
-                    and configuration of development tools such as Prettier and
-                    Eslint for code formatting and linting;
+                    Contributed to strategic expansion decisions through active participation in pedagogical and business meetings.
                   </li>
                   <li>
-                    <b>User Interface (UI) development:</b> Creation of HTML
-                    structures for web pages, including headers, bodies, and
-                    footers; Development of React components for dynamic
-                    rendering and interaction; Addition of functionalities
-                    specific to each project, such as rendering restaurant
-                    pages, contact lists, or interactive elements;
+                    Standardized teaching methodology to ensure quality, scalability, and consistency.
                   </li>
                   <li>
-                    <b>Accessibility:</b> Implementation of accessibility
-                    features such as ARIA roles, alt attributes, and semantic
-                    HTML to ensure that the application is usable by all users;
+                    Trained and mentored 12 instructors, building internal teaching capacity.
                   </li>
                   <li>
-                    <b>Styling:</b> Application of CSS styles using Sass for
-                    better organization, incorporating variables, mixins, and
-                    nesting for readability; Styling of React components using
-                    the Styled Components library;
+                    Impacted 5,000+ students through structured technology programs.
                   </li>
                   <li>
-                    <b>JavaScript Development:</b> Implementation of
-                    interactivity logic using JavaScript, creating functions,
-                    and handling events to respond to user actions;
+                    Conducted school technical visits for implementation oversight and quality assurance.
                   </li>
                   <li>
-                    <b>State Management (Redux Setup):</b> Installation and
-                    configuration of Redux and React Redux libraries; Creation
-                    and implementation of reducers and Redux store for managing
-                    application state;
+                    Contributed to the reformulation and modernization of a Computer Science program.
                   </li>
                   <li>
-                    <b>Testing:</b> Writing unit tests for React components
-                    using Vitest/Jest and integration tests using Cypress to
-                    ensure the quality and reliability of the application;
-                  </li>
-                  <li>
-                    <b>Optimization:</b> Optimization of web performance using
-                    techniques such as code splitting, lazy loading, and
-                    minification to improve the user experience;
-                  </li>
-                  <li>
-                    <b> Responsive Design:</b> Ensuring the website is
-                    responsive and functions well on various devices; Use of CSS
-                    media queries to adjust layouts for different screen sizes;
-                  </li>
-
-                  <li>
-                    <b>Deployment:</b> Deployment of projects on platforms such
-                    as Vercel.
+                    Designed and implemented an internal digital assessment platform to improve learning tracking and performance analysis.
                   </li>
                 </S.ResumeContentSectionBodyItemDescription>
               </S.ResumeContentSectionBody>
             </S.ResumeContentSection>
 
-            <S.ResumeContentSection tabIndex={0} aria-label="Education">
+            <S.ResumeContentSection>
               <S.ResumeContentSectionTitle>
-                Education
+                Education Technology Expertise
               </S.ResumeContentSectionTitle>
               <S.ResumeContentSectionBody>
-                <S.ResumeContentSectionBodyItem>
-                  <b>The Fronted Developer Career Path</b> - Scrimba - Jun 2023
-                  / Jun 2024
-                </S.ResumeContentSectionBodyItem>
-
-                <S.ResumeContentSectionBodyItem>
-                  <b>Frontend Engineering Bootcamp</b> - EBAC - Jan 2023 / Dec
-                  2023
-                </S.ResumeContentSectionBodyItem>
-
-                <S.ResumeContentSectionBodyItem>
-                  <b>Full Stack Web Development Bootcamp</b> - Digital House -
-                  Aug 2021 / Mar 2022
-                </S.ResumeContentSectionBodyItem>
-
-                <S.ResumeContentSectionBodyItem>
-                  <b>JavaScript Algorithms and Data Structures</b> -
-                  FreeCodeCamp - Sep 2021 / Dec 2021
-                </S.ResumeContentSectionBodyItem>
-
-                <S.ResumeContentSectionBodyItem>
-                  <b>Responsive Web Design</b> - FreeCodeCamp - Apr 2021 / Sep
-                  2021
-                </S.ResumeContentSectionBodyItem>
-
-                <S.ResumeContentSectionBodyItem>
-                  <b>PostGraduate Studies in Mathematics</b> - UniBF University
-                  - Mar 2019 / Sep 2019
-                </S.ResumeContentSectionBodyItem>
+                <S.ResumeContentSectionBodyItemDescription>
+                  <li>
+                    Curriculum Architecture (BNCC-aligned)
+                  </li>
+                  <li>
+                    Educational Systems Design
+                  </li>
+                  <li>
+                    EdTech Implementation Strategy
+                  </li>
+                  <li>
+                    Teacher Training & Instructional Leadership
+                  </li>
+                  <li>
+                    Learning Assessment Systems
+                  </li>
+                  <li>
+                    Stakeholder Alignment (Public & Private Education)
+                  </li>
+                  <li>
+                    Pedagogical Standardization
+                  </li>
+                  <li>
+                    Educational Innovation & Program Scaling
+                  </li>
+                </S.ResumeContentSectionBodyItemDescription>
               </S.ResumeContentSectionBody>
             </S.ResumeContentSection>
 
-            <S.ResumeContentSection tabIndex={0} aria-label="Experience">
+            <S.ResumeContentSection>
+              <S.ResumeContentSectionTitle>Technical Background</S.ResumeContentSectionTitle>
+              <S.ResumeContentSectionBody>
+                <p>
+                  React, Styled Components, Tailwind, JavaScript (ES6+), Responsive
+                  Design, REST Api&apos;s, Firebase, Testing (Jest, Cypress), Figma, Web Performance, Web Accessibility, SEO, Git & Github, Deployment.
+                </p>
+              </S.ResumeContentSectionBody>
+            </S.ResumeContentSection>
+
+            <S.ResumeContentSection>
               <S.ResumeContentSectionTitle>
-                Experience
+                Spoken Languages
               </S.ResumeContentSectionTitle>
               <S.ResumeContentSectionBody>
+                <S.ResumeContentSectionBodyItemDescription>
+                  <li><b>Portuguese</b> - Native</li>
+                </S.ResumeContentSectionBodyItemDescription>
+                <S.ResumeContentSectionBodyItemDescription>
+                  <li><b>English</b> - Upper Intermediate</li>
+                </S.ResumeContentSectionBodyItemDescription>
+              </S.ResumeContentSectionBody>
+            </S.ResumeContentSection>
+
+            <S.ResumeContentSection>
+              <S.ResumeContentSectionTitle>
+                Professional Experience
+              </S.ResumeContentSectionTitle>
+              <S.ResumeContentSectionBody>
+                <S.ResumeContentSectionBodyItem>
+                  <S.ResumeContentSectionBodyItemTitle>
+                    Education Technology Consultant
+                    <span>2024 - Present</span>
+                  </S.ResumeContentSectionBodyItemTitle>
+                  <S.ResumeContentSectionBodyItemDescription>
+                    <li>
+                      Led pedagogical restructuring of a programming curriculum deployed in 10+ public schools.
+                    </li>
+                    <li>
+                      Designed scalable BNCC-aligned curriculum frameworks.
+                    </li>
+                    <li>
+                      Established standardized instructional methodologies.
+                    </li>
+                    <li>
+                      Mentored and trained 12 programming instructors.
+                    </li>
+                    <li>
+                      Participated in strategic meetings influencing pedagogical and business decisions.
+                    </li>
+                    <li>
+                      Conducted school implementation audits and quality supervision.
+                    </li>
+                    <li>
+                      Developed an internal React + Tailwind assessment platform to support data-driven pedagogical decisions.
+                    </li>
+                  </S.ResumeContentSectionBodyItemDescription>
+                </S.ResumeContentSectionBodyItem>
+
                 <S.ResumeContentSectionBodyItem>
                   <S.ResumeContentSectionBodyItemTitle>
                     Mathematics Teacher
                     <span>2016 - 2023</span>
                   </S.ResumeContentSectionBodyItemTitle>
                   <S.ResumeContentSectionBodyItemDescription>
-                    <p>
-                      - Developed and implemented lesson plans that met the
-                      requirements of the curriculum.
-                    </p>
-                    <p>
-                      - Created a positive and engaging learning environment for
-                      students.
-                    </p>
-                    <p>
-                      - Provided individualized instruction to students to meet
-                      their specific needs.
-                    </p>
-                    <p>
-                      - Collaborated with colleagues to develop and implement
-                      school-wide initiatives.
-                    </p>
-                    <p>
-                      - Participated in professional development opportunities
-                      to enhance teaching skills.
-                    </p>
+                    <li>
+                      Developed and implemented lesson plans that met the requirements of the curriculum.
+                    </li>
+                    <li>
+                      Created a positive and engaging learning environment for students.
+                    </li>
+                    <li>
+                      Provided individualized instruction to students to meet their specific needs.
+                    </li>
+                    <li>
+                      Collaborated with colleagues to develop and implement school-wide initiatives.
+                    </li>
+                    <li>
+                      Participated in professional development opportunities to enhance teaching skills.
+                    </li>
                   </S.ResumeContentSectionBodyItemDescription>
                 </S.ResumeContentSectionBodyItem>
               </S.ResumeContentSectionBody>
