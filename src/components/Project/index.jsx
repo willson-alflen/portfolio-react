@@ -1,15 +1,36 @@
+import { useContext } from 'react'
 import { useProject } from '@/hooks/useProject'
 import PuffLoader from 'react-spinners/PuffLoader'
+import { ProjectsContext } from '@/contexts/ProjectsContext'
 import * as S from './styles'
 
 export default function Project() {
   const { project: currentProject } = useProject()
+  const { isLoading } = useContext(ProjectsContext)
+
+  if (isLoading) {
+    return (
+      <S.ProjectWrapper>
+        <S.ProjectContainer>
+          <PuffLoader color="rgb(0, 98, 185)" loading={true} size={150} />
+        </S.ProjectContainer>
+      </S.ProjectWrapper>
+    )
+  }
 
   if (!currentProject) {
     return (
       <S.ProjectWrapper>
         <S.ProjectContainer>
-          <PuffLoader color="rgb(0, 98, 185)" loading={true} size={150} />
+          <S.ProjectHeading>Project not found</S.ProjectHeading>
+          <S.ProjectDescription>
+            The requested project could not be found. Please check the link or return to the homepage.
+          </S.ProjectDescription>
+          <S.HeroLink>
+            <S.ProjectLink to="/" aria-label="Back to Home">
+              Back to Home
+            </S.ProjectLink>
+          </S.HeroLink>
         </S.ProjectContainer>
       </S.ProjectWrapper>
     )
@@ -29,7 +50,7 @@ export default function Project() {
             <S.ProjectLink
               to={currentProject.projectLinks.liveLink}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label={`Live Link to ${currentProject.name}`}
             >
               Live Link
@@ -70,7 +91,7 @@ export default function Project() {
                 <S.ProjectLink
                   to={currentProject.projectLinks.liveLink}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   aria-label={`Live Link to ${currentProject.name}`}
                   className="overview-live-link"
                 >
@@ -79,7 +100,7 @@ export default function Project() {
                 <S.ProjectLink
                   to={currentProject.projectLinks.codeLink}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   aria-label={`Code Link to ${currentProject.name}`}
                   className="overview-code-link"
                 >

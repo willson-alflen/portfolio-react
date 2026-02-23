@@ -18,7 +18,7 @@ export const ProjectsProvider = ({ children }) => {
         setProjects(projectsList)
         setIsLoading(false)
       } catch (error) {
-        toast.error(error)
+        toast.error(error.message)
         setIsLoading(false)
       }
     }

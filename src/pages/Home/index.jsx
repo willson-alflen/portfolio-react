@@ -33,11 +33,9 @@ export default function Home() {
       })
     })
 
-    window.onload = () => {
-      const sections = document.querySelectorAll('section')
-      sections.forEach((section) => observer.observe(section))
-      updateActiveLink()
-    }
+    const sections = document.querySelectorAll('section')
+    sections.forEach((section) => observer.observe(section))
+    updateActiveLink()
 
     window.addEventListener('scroll', updateActiveLink)
 

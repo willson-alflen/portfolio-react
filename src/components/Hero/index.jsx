@@ -54,17 +54,29 @@ export default function Hero() {
 
       <S.HeroSocials>
         <S.Social>
-          <a href="https://www.linkedin.com/in/willson-alflen/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/willson-alflen/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={LinkedinIcon} alt="Visit my Linkedin profile" />
           </a>
         </S.Social>
         <S.Social>
-          <a href="https://github.com/willson-alflen" target="_blank">
+          <a
+            href="https://github.com/willson-alflen"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={GithubIcon} alt="Visit my Github profile" />
           </a>
         </S.Social>
         <S.Social>
-          <a href="mailto:willson.alflen@gmail.com" target="_blank">
+          <a
+            href="mailto:willson.alflen@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={GmailIcon} alt="Send me an email" />
           </a>
         </S.Social>
@@ -72,6 +84,7 @@ export default function Hero() {
           <a
             href="https://api.whatsapp.com/send?phone=5547999999999"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <img src={WhatsappIcon} alt="Send me a message on Whatsapp" />
           </a>

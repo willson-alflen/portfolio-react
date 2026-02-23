@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ProjectsContext } from '@/contexts/ProjectsContext'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import { slugify } from '@/utils/slugify'
 import * as S from './styles'
 
 const MotionProject = S.Project
@@ -35,7 +36,7 @@ export default function Projects() {
                   transition={{ delay: index * 0.5, duration: 0.5 }}
                 >
                   <Link
-                    to={`/${project.name.replace(' ', '-')}`}
+                    to={`/${slugify(project.name)}`}
                     aria-label={`See more about ${project.name}`}
                   >
                     <img
@@ -54,7 +55,7 @@ export default function Projects() {
                     <h3>{project.name}</h3>
                     <p>{project.intro}</p>
                     <Link
-                      to={`/${project.name.replace(' ', '-')}`}
+                      to={`/${slugify(project.name)}`}
                       aria-label={`See more about ${project.name}`}
                     >
                       See more
