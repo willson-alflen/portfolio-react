@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import Hero from '@/components/Hero'
-import Projects from '@/components/Projects'
+import Impact from '@/components/Impact'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import SEO from '@/components/SEO'
@@ -49,7 +49,7 @@ export default function Home() {
     <>
       <SEO title="Willson Alflen | Front-end Developer" />
       <Hero />
-      <Projects />
+      <Impact />
       <About />
       <Contact />
     </>

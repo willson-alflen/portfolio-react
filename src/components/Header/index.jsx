@@ -78,12 +78,12 @@ export default function Header() {
                 Home
               </a>
               <a
-                href="#projects"
+                href="#impact"
                 className="nav-link"
-                aria-label="Projects"
+                aria-label="Impact"
                 onClick={closeMenu}
               >
-                Projects
+                Impact
               </a>
               <a
                 href="#about"
@@ -101,6 +101,13 @@ export default function Header() {
               >
                 Contact
               </a>
+              <S.StyledNavLink
+                to="/projects"
+                aria-label="Projects"
+                onClick={closeMenu}
+              >
+                Projects
+              </S.StyledNavLink>
               <S.StyledNavLink
                 to="/resume"
                 aria-label="Resume"
@@ -120,12 +127,12 @@ export default function Header() {
                 Home
               </Link>
               <Link
-                to={{ pathname: '/', hash: '#projects' }}
+                to={{ pathname: '/', hash: '#impact' }}
                 className="nav-link"
-                aria-label="Projects"
+                aria-label="Impact"
                 onClick={closeMenu}
               >
-                Projects
+                Impact
               </Link>
               <Link
                 to={{ pathname: '/', hash: '#about' }}
@@ -143,6 +150,13 @@ export default function Header() {
               >
                 Contact
               </Link>
+              <S.StyledNavLink
+                to="/projects"
+                aria-label="Projects"
+                onClick={closeMenu}
+              >
+                Projects
+              </S.StyledNavLink>
               <S.StyledNavLink
                 to="/resume"
                 aria-label="Resume"

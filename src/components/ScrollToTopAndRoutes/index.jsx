@@ -6,6 +6,7 @@ import Loading from '@/components/Loading'
 const Home = lazy(() => import('@/pages/Home'))
 const ProjectDetail = lazy(() => import('@/pages/ProjectDetail'))
 const ResumePage = lazy(() => import('@/pages/Resume'))
+const ProjectsPage = lazy(() => import('@/pages/Projects'))
 
 export default function ScrollToTopAndRoutes() {
   const location = useLocation()
@@ -28,6 +29,7 @@ export default function ScrollToTopAndRoutes() {
           <Route index element={<Home />} />
           <Route path="/:projectName" element={<ProjectDetail />} />
           <Route path="/resume" element={<ResumePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
         </Route>
       </Routes>
     </Suspense>

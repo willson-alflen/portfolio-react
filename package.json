@@ -24,7 +24,8 @@
     "react-spinners": "^0.13.8",
     "react-toastify": "^10.0.6",
     "react-type-animation": "^3.2.0",
-    "styled-components": "^6.3.11"
+    "styled-components": "^6.3.11",
+    "prop-types": "^15.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.28",

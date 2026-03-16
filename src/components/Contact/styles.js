@@ -68,6 +68,7 @@ export const ContactHeading = styled.div`
 export const ContactForm = styled.form`
   display: grid;
   grid-template-columns: 1fr;
+  gap: 1.25rem;
   max-width: 600px;
   margin: 0 auto;
 
@@ -104,12 +105,20 @@ export const ContactForm = styled.form`
       background: ${(props) => props.theme.accentColor};
     }
   }
+
+  @media (max-width: 968px) {
+    gap: 1rem;
+  }
+
+  @media (max-width: 375px) {
+    gap: 0.75rem;
+  }
 `
 
 export const FormInput = styled.input`
   width: 100%;
   padding: 1rem;
-  border: none;
+  border: 1px solid ${(props) => props.theme.backgroundColorAlt2};
   outline: none;
   border-radius: 4px;
   font-family: 'Lato', sans-serif;
@@ -118,7 +127,7 @@ export const FormInput = styled.input`
   color: ${(props) => props.theme.textColor};
 
   &:focus {
-    border: 2px solid red;
+    border: 2px solid ${(props) => props.theme.accentColor};
   }
 
   ${(props) =>
@@ -132,17 +141,17 @@ export const FormTextArea = styled.textarea`
   width: 100%;
   height: 150px;
   padding: 1rem;
-  border: none;
+  border: 1px solid ${(props) => props.theme.backgroundColorAlt2};
   outline: none;
   border-radius: 4px;
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
   background: ${(props) => props.theme.backgroundColorAlt};
   color: ${(props) => props.theme.textColor};
-  margin-bottom: 3rem;
+  margin-bottom: 0;
 
   &:focus {
-    border: 2px solid red;
+    border: 2px solid ${(props) => props.theme.accentColor};
   }
 
   ${(props) =>

@@ -136,6 +136,15 @@ export const AboutSkills = styled.div`
     text-align: right;
   }
 
+  /* Espaçamento entre seções internas */
+  ul + h3 {
+    margin-top: 3rem;
+  }
+
+  h3 + ul {
+    margin-top: 1rem;
+  }
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -156,6 +165,14 @@ export const AboutSkills = styled.div`
 
     h3 {
       text-align: center;
+      /* Relaxa o espaçamento em telas médias */
+      & + ul {
+        margin-top: 0.75rem;
+      }
+    }
+
+    ul + h3 {
+      margin-top: 2.5rem;
     }
 
     ul {
@@ -168,6 +185,10 @@ export const AboutSkills = styled.div`
       font-size: 1.75rem;
     }
 
+    ul + h3 {
+      margin-top: 2rem;
+    }
+
     ul {
       li {
         font-size: 0.9rem;
@@ -178,6 +199,10 @@ export const AboutSkills = styled.div`
   @media (max-width: 375px) {
     h3 {
       font-size: 1.5rem;
+    }
+
+    ul + h3 {
+      margin-top: 1.5rem;
     }
 
     ul {

@@ -40,14 +40,16 @@ export default function Hero() {
           <span>Willson Alflen</span>
         </S.HeroHeading>
         <S.HeroDescription>
-          I&apos;m a <strong>Front-end Developer</strong> based in Brazil.
+          I&apos;m an <strong>Education Technology Specialist</strong> leading
           <br />
-          My specialties are <strong>React</strong> and{' '}
-          <strong>Styled Components</strong>.
+          <strong>curriculum architecture</strong>, <strong>teacher training</strong> and{' '}
+          <strong>EdTech implementation</strong>
+          <br />
+          across 10+ schools impacting over 5000 students.
         </S.HeroDescription>
         <S.HeroCTA>
-          <a href="#projects" aria-label="See my projects">
-            See my projects
+          <a href="#impact" aria-label="See my impact">
+            See my impact
           </a>
         </S.HeroCTA>
       </S.HeroContent>
